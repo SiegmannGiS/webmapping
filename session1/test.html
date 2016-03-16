@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Web mapping Kurs</title>
+</head>
+
+<body>
+
+<h1>Marcel Siegmann</h1>
+<h2>Validatoren</h2>
+<hr/> <!-- Linie (Kommentar) -->
+
+
+ 
+<br/>
+
+<table border style="width:100%" onclick="alert(event.target.getAttribute('style'))">
+	<tr>
+		<td style='background-color:rgb(127,201,127)'>&nbsp;</td>
+		<td style='background-color:rgb(190,174,212)'>&nbsp;</td>
+		<td style='background-color:rgb(253,192,134)'>&nbsp;</td>
+		<td style='background-color:rgb(255,255,153)'>&nbsp;</td>
+		<td style='background-color:rgb(56,108,176)'>&nbsp;</td>
+		<td style='background-color:rgb(240,2,127)'>&nbsp;</td>
+		<td style='background-color:rgb(191,91,23)'>&nbsp;</td>
+		<td style='background-color:rgb(102,102,102)'>&nbsp;</td>
+	</tr>
+</table>
+
+<br/>
+
+<table border style="width: 100%" onclick="alert(event.target.getAttribute('style'))">
+	<tr>
+		<td style='background-color:rgb(255,255,204)'>&nbsp;</td>
+		<td style='background-color:rgb(217,240,163)'>&nbsp;</td>
+		<td style='background-color:rgb(173,221,142)'>&nbsp;</td>
+		<td style='background-color:rgb(120,198,121)'>&nbsp;</td>
+		<td style='background-color:rgb(49,163,84)'>&nbsp;</td>
+		<td style='background-color:rgb(0,104,55)'>&nbsp;</td>
+	</tr>
+</table>
+
+<table border>
+	<tr>
+		<th>Spalte 1</th>
+		<th>Spalte 2</th>
+		<th>Spalte 3</th>
+		<th>Spalte 4</th>
+	</tr>
+	<tr>
+		<td style="background-color:rgb(127,201,127)">s1</td>
+		<td style="background-color:rgb(190,174,212)">s2</td>
+		<td style="background-color:rgb(253,192,134)">s3</td>
+		<td style="background-color:rgb(255,255,153)">s4</td>
+	</tr>
+	<tr>
+		<td style='background-color:rgb(166,97,26)'>o</td>
+		<td style='background-color:rgb(223,194,125)'>o</td>
+		<td style='background-color:rgb(128,205,193)'>o</td>
+		<td style='background-color:rgb(1,133,113)'>o</td>
+	</tr>
+	<tr>
+		<td style='background-color:rgb(141,211,199)'>o</td>
+		<td style='background-color:rgb(255,255,179)'>o</td>
+		<td style='background-color:rgb(190,186,218)'>o</td>
+		<td style='background-color:rgb(251,128,114)'>o</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>6</td>
+		<td colspan="2">7</td>
+	</tr>
+	<tr>
+		<td colspan="4">8</td>
+	</tr>
+</table>
+http://colorbrewer2.org/
+<h3>Tabelle rowspan</h3>
+<table border>
+	<tr>
+		<th rowspan="2" style="vertical-align:top">Spalte 1</th> <!-- default = middle, or bottom -->
+		<th>Spalte 2</th>
+		<th>Spalte 3</th>
+		<th>Spalte 4</th>
+	</tr>
+	<tr>
+		<td style="text-align:right">s2</td> <!-- default = left, center -->
+		<td>s3</td>
+		<td style="background-color:rgb(255,0,0)">s4</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>6</td>
+		<td colspan="2">7</td>
+	</tr>
+	<tr>
+		<td colspan="4">8</td>
+	</tr>
+</table>
+
+<br/><br/>
+
+<img src="images/innsbruck-tirol-202mo.jpg" 
+	 style="height:100px"
+/>
+<br/>
+<figure>
+<a href="images/innsbruck-tirol-202mo.jpg" title="Klicken für großes Bild"><img src="icons/icon.jpg" style="height:100px"/></a>
+<figcaption style="font-size:80%"><strong><em>Icon</em></strong>
+</figcaption>
+</figure>
+
+<br/>
+
+<figure>
+    <a href="innsbruck-tirol-202mo.jpg" title="Test">
+        <img src="icons/icon.jpg" style="height:100px">
+    </a>
+    <figcaption>
+        <strong><em>Icon</em></strong>
+
+    </figcaption>
+</figure>
+
+
+<img src="http://foto.images-tiscover.com/fotos/0/3/1024/576/80/FFFFFF/http%3A%2F%2Ffoto-origin.images-tiscover.com%2Fat%2Fimages%2FRGN%2F497%2FRGN497at%2Finnsbruck-tirol-202mo.jpg/3VxQ6sbhcgJaIWeo62je8A%3D%3D/z/7/innsbruck-tirol-202mo.jpg"
+	 alt="Innsbruck"
+	 title="Innsbruck"
+	 style="height:200px" 
+/>
+<!-- height:200px;width:200px;border:2px solid green -->
+
+<p>
+Da ist ein Absatz
+</p>
+
+<ol> 
+<li><a href="https://validator.nu/">zum validator</a></li> 
+<li><a href="https://validator.nu/">zum validator</a></li> 
+<li><a href="https://validator.nu/">zum validator</a></li> 
+<li><a href="https://validator.nu/">zum validator</a></li> 
+<!-- ul = unordered list, li = list input, ol = ordered list
+Ineinander möglich 
+<br/> = break einzelnes Element-->
+</ol>
+
+<br/>
+
+<table border>
+    <tr>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+    </tr>
+    <tr>
+        <td>test</td>
+        <td>test</td>
+    </tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>
