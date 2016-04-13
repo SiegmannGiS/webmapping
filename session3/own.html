@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Own Map Iceland</title>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script>
+    window.onload = function () {
+
+        var schichten = { // http://www.basemap.at/wmts/1.0.0/WMTSCapabilities.xml
+            geolandbasemap : L.tileLayer("http://{s}.wien.gv.at/basemap/geolandbasemap/normal/google3857/{z}/{y}/{x}.png", {
+                subdomains : ['maps', 'maps1', 'maps2', 'maps3', 'maps4'],
+                attribution : 'Datenquelle: <a href="http://www.basemap.at/">basemap.at</a>'
+            }),
+            bmapoverlay : L.tileLayer("http://{s}.wien.gv.at/basemap/bmapoverlay/normal/google3857/{z}/{y}/{x}.png", {
+                subdomains : ['maps', 'maps1', 'maps2', 'maps3', 'maps4'],
+                attribution : 'Datenquelle: <a href="http://www.basemap.at/">basemap.at</a>'
+            }),
+            bmapgrau : L.tileLayer("http://{s}.wien.gv.at/basemap/bmapgrau/normal/google3857/{z}/{y}/{x}.png", {
+                subdomains : ['maps', 'maps1', 'maps2', 'maps3', 'maps4'],
+                attribution : 'Datenquelle: <a href="http://www.basemap.at/">basemap.at</a>'
+            }),
+            bmaphidpi : L.tileLayer("http://{s}.wien.gv.at/basemap/bmaphidpi/normal/google3857/{z}/{y}/{x}.jpeg", {
+                subdomains : ['maps', 'maps1', 'maps2', 'maps3', 'maps4'],
+                attribution : 'Datenquelle: <a href="http://www.basemap.at/">basemap.at</a>'
+            }),
+            bmaporthofoto30cm : L.tileLayer("http://{s}.wien.gv.at/basemap/bmaporthofoto30cm/normal/google3857/{z}/{y}/{x}.jpeg", {
+                subdomains : ['maps', 'maps1', 'maps2', 'maps3', 'maps4'],
+                attribution : 'Datenquelle: <a href="http://www.basemap.at/">basemap.at</a>'
+            })
+        };
+
+        var map = L.map('karte', {
+            layers : [schichten.geolandbasemap]
+        });
+
+        L.control.layers({
+            "Geoland Basemap" : schichten.geolandbasemap,
+            "Geoland Basemap Overlay" : schichten.bmapoverlay,
+            "Geoland Basemap Grau": schichten.bmapgrau,
+            "Geoland Basemap High DPI" : schichten.bmaphidpi,
+            "Geoland Basemap Orthofoto" : schichten.bmaporthofoto30cm
+        }).addTo(map)
+
+        L.control.scale({
+            'imperial' : true
+        }).addTo(map);
+
+        L.marker([47.263303, 11.384434]).addTo(map);
+        L.marker([47.286022, 11.398607]).addTo(map);
+        L.marker([47.216315, 11.466409]).addTo(map);
+        L.marker([47.263436, 11.400483]).addTo(map);
+        L.marker([47.259112, 11.393695]).addTo(map);
+
+        var polyline = L.polyline([[47.263303, 11.384434],
+            [47.286022, 11.398607],
+            [47.216315, 11.466409],
+            [47.263436, 11.400483],
+            [47.259112, 11.393695]], {color: 'red'}).addTo(map);
+
+        map.fitBounds(polyline.getBounds().pad(0.1));
+    };
+</script>
+</head>
+<body>
+
+<h1>Wo ich in Island war</h1>
+
+    <div id="karte" style="width:900px;height:600px"></div>
+
+</body>
+</html>
+
+
+<!--http://leafletjs.com/reference.html-->
